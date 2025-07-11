@@ -5,7 +5,10 @@ description = "Reusable math/number theory library for Project Euler"
 authors = [{ name = "Jon", email = "jon@misprint.com" }]
 readme = "README.md"
 requires-python = ">=3.10"
-dependencies = []
+dependencies = [
+    "mypy>=1.16.1",
+    "numpy>=2.2.6",
+]
 
 
 [build-system]
@@ -17,3 +20,11 @@ package-dir = { "" = "src" }
 
 [tool.setuptools.packages.find]
 where = ["src"]
+
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+ignore_missing_imports = true
+show_error_codes = true
+pretty = true
